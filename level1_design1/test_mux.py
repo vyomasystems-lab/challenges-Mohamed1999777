@@ -70,7 +70,7 @@ async def test_mux(dut):
    dut.inp29.value = IN29
    dut.inp30.value = IN30
    Arr_in=[ IN0, IN1, IN2, IN3, IN4, IN5, IN6, IN7, IN8, IN9, IN10, IN11, IN12, IN13, IN14, IN15, IN16, IN17, IN18, IN19, IN20, IN21, IN22, IN23, IN24, IN25, IN26, IN27, IN28, IN29, IN30 ]  
-    for SEL in range(32):
+   for SEL in range(32):
 
         #SEL = random.randint(0, 32)
 
