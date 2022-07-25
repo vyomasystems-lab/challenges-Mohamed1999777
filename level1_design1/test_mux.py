@@ -6,7 +6,7 @@ from cocotb.triggers import Timer
 @cocotb.test()
 async def test_mux(dut):
     """Test for mux2"""
-   """Test for adding 2 random numbers multiple times"""
+   #"""Test for adding 2 random numbers multiple times"""
         IN0=0
         IN1=1
         IN2=2
