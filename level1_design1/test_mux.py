@@ -80,7 +80,7 @@ async def test_mux(dut):
 
         await Timer(2, units='ns')
         
-        dut._log.info(f'SEL={SEL:05} model={Arr_in[SEL]:02}  DUT={int(dut.out.value):02}')
+        cocotb.log.info(f'SEL={SEL:05} model={Arr_in[SEL]:02}  DUT={int(dut.out.value):02}')
         assert dut.out.value == Arr_in[SEL], "Randomised test failed with:Arr_in{SEL}".format(
             SEL=dut.sel.value)
-            #  cocotb.log.info('##### CTB: Develop your test here ########')
+            #  cocotb.log.info('##### CTB: Develop your test here ########')dut._log.info
