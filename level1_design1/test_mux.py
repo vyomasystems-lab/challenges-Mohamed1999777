@@ -6,38 +6,38 @@ from cocotb.triggers import Timer
 @cocotb.test()
 async def test_mux(dut):
     """Test for mux2"""
-   #"""Test for adding 2 random numbers multiple times"""
-        IN0 = 0
-        IN1 = 1
-        IN2 = 2
-        IN3 = 3 
-        IN4 = 0
-        IN5 = 1
-        IN6 = 2
-        IN7 = 3
-        IN8 = 0
-        IN9 = 1
-        IN10 = 2
-        IN11 = 3
-        IN12 = 0
-        IN13 = 1
-        IN14 = 2
-        IN15 = 3
-        IN16 = 0
-        IN17 = 1
-        IN18 = 2
-        IN19 = 3
-        IN20 = 0  
-        IN21 = 1
-        IN22 = 2
-        IN23 = 3
-        IN24 = 0
-        IN25 = 1
-        IN26 = 2
-        IN27 = 3
-        IN28 = 0
-        IN29 = 1
-        IN30 = 2 
+   """Test for adding 2 random numbers multiple times"""
+   IN0 = 0
+   IN1 = 1
+   IN2 = 2
+   IN3 = 3 
+   IN4 = 0
+   IN5 = 1
+   IN6 = 2
+   IN7 = 3
+   IN8 = 0
+   IN9 = 1
+   IN10 = 2
+   IN11 = 3
+   IN12 = 0
+   IN13 = 1
+   IN14 = 2
+   IN15 = 3
+   IN16 = 0
+   IN17 = 1
+   IN18 = 2
+   IN19 = 3
+   IN20 = 0  
+   IN21 = 1
+   IN22 = 2
+   IN23 = 3
+   IN24 = 0
+   IN25 = 1
+   IN26 = 2
+   IN27 = 3
+   IN28 = 0
+   IN29 = 1
+   IN30 = 2 
 
  dut.inp0.value  = IN0
  dut.inp1.value  = IN1 
@@ -84,3 +84,4 @@ async def test_mux(dut):
         assert dut.out.value == Arr_in[SEL], "Randomised test failed with:Arr_in{SEL}".format(
             SEL=dut.sel.value)
             #  cocotb.log.info('##### CTB: Develop your test here ########')dut._log.info
+
