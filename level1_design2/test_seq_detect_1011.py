@@ -23,4 +23,20 @@ async def test_seq_bug1(dut):
     dut.reset.value = 0
     await FallingEdge(dut.clk)
 
-    cocotb.log.info('#### CTB: Develop your test here! ######')
+    IN = [ 0, 1, 0, 1, 1 ] 
+
+    # input driving
+    #dut.inp_bit.value = IN
+
+
+    #await Timer(2, units='ns')
+                for i in range(4):
+
+                    dut.inp_bit.value = IN[i]
+                    await RisingEdge(dut.clk)
+
+
+
+
+    assert dut.seq_seen.value == 1, f"Sequence detector result is incorrect: {dut.seq_seen.value} != 1"
+    #cocotb.log.info('#### CTB: Develop your test here! ######')
