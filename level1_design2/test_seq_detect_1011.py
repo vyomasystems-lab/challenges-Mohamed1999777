@@ -33,7 +33,8 @@ async def test_seq_bug1(dut):
     for i in range(3):
         await RisingEdge(dut.clk)
         dut.inp_bit.value = IN[i]
-                    
+        await FallingEdge(dut.clk)
+        print ("current state = {dut.current_state.vlue}")            
 
 
 
