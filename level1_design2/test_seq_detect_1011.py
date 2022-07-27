@@ -36,8 +36,8 @@ async def test_seq_bug1(dut):
         await FallingEdge(dut.clk)
         print ("current state = ",dut.current_state.value)            
 
-
-
+    await RisingEdge(dut.clk)
+    await FallingEdge(dut.clk)
 
     assert dut.seq_seen.value == 1, f"Sequence detector result is incorrect: {dut.seq_seen.value} != 1"
     #cocotb.log.info('#### CTB: Develop your test here! ######')
