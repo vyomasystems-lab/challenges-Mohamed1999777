@@ -31,9 +31,9 @@ async def test_seq_bug1(dut):
 
     #await Timer(2, units='ns')
                 for i in range(4):
-
-                    dut.inp_bit.value = IN[i]
                     await RisingEdge(dut.clk)
+                    dut.inp_bit.value = IN[i]
+                    
 
 
 
