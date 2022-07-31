@@ -1,13 +1,12 @@
 # Level2_design Verification
 
-The verification environment is setup using provided for the hackathon.
-![image](https://user-images.githubusercontent.com/100050717/182041595-fe527e9d-01b2-41fb-8894-438dfa688dd1.png)
- 
+The verification environment is setup using [Vyoma's UpTickPro](https://vyomasystems.com) provided for the hackathon.
+
+
 
 ## Verification Environment
 
-
-A based Python test is developed.
+The [CoCoTb](https://www.cocotb.org/) based Python test is developed.
 
 The values are assigned to the input port using random generated data to sources inputs 1, 2, and 3 
   
