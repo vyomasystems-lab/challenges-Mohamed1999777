@@ -1,7 +1,8 @@
 # Level2_design Verification
 
-The verification environment is setup using ![image](https://user-images.githubusercontent.com/100050717/182041595-fe527e9d-01b2-41fb-8894-438dfa688dd1.png)
- provided for the hackathon.
+The verification environment is setup using provided for the hackathon.
+![image](https://user-images.githubusercontent.com/100050717/182041595-fe527e9d-01b2-41fb-8894-438dfa688dd1.png)
+ 
 
 ## Verification Environment
 
