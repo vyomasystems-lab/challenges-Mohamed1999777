@@ -13,11 +13,12 @@ The values are assigned to the input port as arandom value from 0 to 2 to all 32
 
 then a for loop to change select line from 0 to 31 
 
- 
-for SEL in range(30):
-        dut.sel.value = SEL
 
-        await Timer(2, units='ns')
+   for SEL in range(30):
+     
+     dut.sel.value = SEL
+
+     await Timer(2, units='ns')
 
 
 The assert statement is used for comparing the  outut to the expected value.
