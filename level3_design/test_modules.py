@@ -28,8 +28,8 @@ async def test_modules(dut):
         A = f'{random.getrandbits(32):=032b}'
         B = f'{random.getrandbits(32):=032b}'
 
-        dut.a.value = int(A)
-        dut.b.value = int(B)
+        dut.a.value = int(A,2)
+        dut.b.value = int(B,2)
 
         int_A = A[1:17]
         int_B = B[1:17]
@@ -78,6 +78,6 @@ async def test_modules(dut):
             dut_res = dut_res
 
         dut._log.info(f'A={x} B={y} model={model_result} DUT={dut_res}')
-        assert ddut_res == model_result, "Randomised test failed with: {X} + {Y} = {Z}".format(
-            X=x, Y=y, Z=dut_resma)
+        assert dut_res == model_result, "Randomised test failed with: {X} + {Y} = {Z}".format(
+            X=x, Y=y, Z=dut_res)
 
