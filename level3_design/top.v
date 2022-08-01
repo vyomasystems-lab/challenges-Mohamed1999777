@@ -33,7 +33,7 @@ module top(
 	reg [31:0] c_sig;
 		
 	// Instantiate the Unit Under Test (UUT)
-	qadd #(23,32) uut (a, b, c);
+	qadd #(15,32) uut (a, b, c);
 //	qmult #(23,32) uut (a, b, c);
 //	qdiv #(15,32)	uut (a, b, start, clk, c);
 endmodule
