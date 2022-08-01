@@ -77,5 +77,5 @@ async def test_modules(dut):
 
         dut._log.info(f'A={x} B={y} model={model_result} DUT={dut_res}')
         assert ddut_res == model_result, "Randomised test failed with: {X} + {Y} = {Z}".format(
-            X=x, Y=y, Z=dut_res)
+            X=x, Y=y, Z=dut_resma)
 
