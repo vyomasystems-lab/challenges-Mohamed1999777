@@ -18,23 +18,23 @@ The assert statement is used for comparing the  outut to the expected value.
 
 The following error is seen:
 
-
+![level3_design_bug](https://user-images.githubusercontent.com/100050717/182199012-e4d6f744-56e5-47ec-babc-ba3a821dcd5f.PNG)
 
 ## Test Scenario *(Important)*
-- Test Inputs: SEL = 13 
-- Expected Output: out=1
-- Observed Output in the DUT dut.out=0
+- A  =  52855.671966552734 
+- B  = -39019.27978515625 
+- model[Expected out]       =  13836.392181396484 
+- DUT[result from module]   = -13836.392181396484
+
 
 Output mismatches for the above inputs proving that there is a design bug
 
 ## Design Bug
-The design has the following bugs 
-* SEL=12 isn't included so whenever selection line is 12 the output is the default value = 0 
-* SEL=13 is repeated for both selection line values = 12 and 13 so the output when the selection line is 13 is ambiguious and the simulator choosed the input 12  
+The design has the following bugs
 
-## Design Fix
-Updating the design and re-running the test makes the test pass.
-
+* There is a problem in the sign of the result
+* The bug habbens when A is bigger than B and A is positive and B is negative , the result is correct but the sign isn't correct
+ 
 ## Verification Strategy
  The input data is randomised 
  all selection lines were tested 
