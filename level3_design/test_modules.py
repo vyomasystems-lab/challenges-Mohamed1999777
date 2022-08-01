@@ -22,8 +22,9 @@ def clock_gen(signal):
 @cocotb.test()
 async def test_modules(dut):
     """Test for adding 2 random numbers multiple times"""
-
-    for i in range(5):
+    def decimalToBinary(n):
+        return bin(n).replace("0b","")
+    for i in range(10):
 
         A = f'{random.getrandbits(32):=032b}'
         B = f'{random.getrandbits(32):=032b}'
@@ -63,7 +64,7 @@ async def test_modules(dut):
         await Timer(2, units='ns')
         
         dut_32_int = dut.c.value
-        dut_32_ = str(dut_32_int)
+        dut_32_ = decimalToBinary(dut_32_int)#str(dut_32_int)
         dut_32 =dut_32_.zfill(32)
         sign_dut = dut_32[0]
         int_dut = dut_32[1:17]
