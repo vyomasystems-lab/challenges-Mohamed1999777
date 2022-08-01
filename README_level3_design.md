@@ -32,7 +32,7 @@ Output mismatches for the above inputs proving that there is a design bug
 ## Design Bug
 The design has the following bugs
 
-* There is a problem in the sign of the result
+* There is a problem in the sign of the result of the Adder Block
 * The bug habbens when A is bigger than B and A is positive and B is negative , the result is correct but the sign isn't correct
  
 ## Verification Strategy
