@@ -28,8 +28,8 @@ async def test_modules(dut):
         A = f'{random.getrandbits(32):=032b}'
         B = f'{random.getrandbits(32):=032b}'
 
-        dut.a.value = A
-        dut.b.value = B
+        dut.a.value = int(A)
+        dut.b.value = int(B)
 
         int_A = A[1:17]
         int_B = B[1:17]
@@ -62,7 +62,9 @@ async def test_modules(dut):
 
         await Timer(2, units='ns')
         
-        dut_32 = dut.c.value
+        dut_32_int = dut.c.value
+        dut_32_ = str(dut_32_int)
+        dut_32 =dut_32_.zfill(32)
         sign_dut = dut_32[0]
         int_dut = dut_32[1:17]
         float_dut = dut_32 [17:32]
