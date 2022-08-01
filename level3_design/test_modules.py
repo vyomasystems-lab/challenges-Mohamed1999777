@@ -49,12 +49,12 @@ async def test_modules(dut):
 
         x = x_int + x_float
         y = y_int + y_float
-        if sign_A == 1:
+        if sign_A == '1':
             x = x * -1
         else:
             x = x
 
-        if sign_B == 1:
+        if sign_B == '1':
             y = y * -1
         else:
             y = y
@@ -73,11 +73,13 @@ async def test_modules(dut):
         dut_res_float= int(float_dut,2)/(2**15)
         dut_res = dut_res_int + dut_res_float
 
-        if sign_dut == 1:
+        if sign_dut == '1':
             dut_res = dut_res * -1
         else:
             dut_res = dut_res
-
+        print(A)
+        print(B)
+        print(dut.c.value)
         dut._log.info(f'A={x} B={y} model={model_result} DUT={dut_res}')
         assert dut_res == model_result, "Randomised test failed with: {X} + {Y} = {Z}".format(
             X=x, Y=y, Z=dut_res)
